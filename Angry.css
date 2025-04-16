@@ -123,6 +123,7 @@
   position: fixed;
   left: -500px;
   top: 0px;
+  z-index: 1;
 } 
 button {
   background-color: #4CAF50; /* Grüner Hintergrund */
