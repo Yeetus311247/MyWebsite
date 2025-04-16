@@ -109,7 +109,7 @@
 }
 .sonic {
   position: fixed;
-  left: 50px;
+  left: 450px;
   top: 150px;
   z-index: 1;
 }
@@ -121,7 +121,7 @@
 }
 .Pika {
   position: fixed;
-  left: -400px;
+  left: -100px;
   top: 0px;
   z-index: 1;
 } 
