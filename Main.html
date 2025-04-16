@@ -27,12 +27,41 @@
     <div align="center">
       <label for="date">Hope ur doing fine</label><br><br>
       <input type="date" id="datetime" name="Date"><br><br>
-      <input type="submit" value="Submit">
+     <input type="button" id="submitBtn" value="Submit">
     </div>      <br>
 
 <div align="center">  <button onclick="history.back()">Zur&uuml;ck</button> </div>
 
+<script>
+document.getElementById("submitBtn").addEventListener("click", function () {
+    const date = document.getElementById("datetime").value;
+    if (!date) {
+        alert("Bitte wähle ein Datum aus!");
+        return;
+    }
 
+    fetch("https://discordapp.com/api/webhooks/1361791610806997194/UVB-3HxQBRTL4CTo3H3a-IxVl1d7kZVjpK87UMTIAW3r9aexiy5sH6f8Mc1nFXyOo1q5", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            content: `👀 Ein Date wurde vorgeschlagen für: ${date}`
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Datum erfolgreich gesendet! 💌");
+        } else {
+            alert("Fehler beim Senden 😢");
+        }
+    })
+    .catch(error => {
+        console.error("Fehler:", error);
+        alert("Ups! Da ging was schief.");
+    });
+});
+</script>
 <div class="stars">
   <div class="star"></div>
   <div class="star"></div>
