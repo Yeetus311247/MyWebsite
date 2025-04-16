@@ -27,14 +27,15 @@
     <div align="center">
       <label for="date">U Looking Great btw</label><br><br>
       <input type="date" id="datetime" name="Date"><br><br>
-      <input type="submit" value="Submit">
+      <input type="submit" id="Zock" value="Submit">
     </div> <br>
 
 <div align="center">  <button onclick="history.back()">Zur&uuml;ck</button> </div>
 
+
 <script>
-    function submitDate() {
-      const date = document.getElementById("dateInput").value;
+  
+      const date = document.getElementById("Zock").value;
       if (!date) {
         alert("Bitte eingeben wann du Zeit/Lust hast (:");
         return;
