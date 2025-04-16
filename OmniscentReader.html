@@ -22,6 +22,14 @@
       z-index: 2;
     }
 
+    .corner-image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 150px;
+      z-index: 3;
+    }
+
     #factBox {
       color: #2b004f;
       font-size: 1.5rem;
@@ -53,23 +61,24 @@
   </style>
 </head>
 <body>
-     <img src="all or nothing/planet-removebg-preview.png" alt="planet" class="corner-image">
+  <img src="all or nothing/planet-removebg-preview.png" alt="planet" class="corner-image">
+
   <div class="wrapper">
-    <div id="factBox">Willst du einen Fakt? Dr&uuml;ck den Button! ??</div>
-    <button id="nextFactBtn">N&auml;chster Fakt</button>
+    <div id="factBox">Willst du einen Fakt? Drück den Button! 🧐</div>
+    <button id="nextFactBtn">Nächster Fakt</button>
   </div>
 
   <script>
     const facts = [
       "Wusstest du, dass der Argentinosaurus 70 Tonnen wog?",
-      "Der Name Megalodon ist griechisch und steht f&uuml;rr 'gro&szlig;er Zahn'.",
+      "Der Name Megalodon ist griechisch und steht für 'großer Zahn'.",
       "Auberginen enthalten Nikotin.",
-      "Schildkr&ouml;ten masturbieren. Ja, wirklich.",
-      "Zu den Nebenwirkungen von Aspirin geh&ouml;ren Kopfschmerzen.",
+      "Schildkröten masturbieren. Ja, wirklich.",
+      "Zu den Nebenwirkungen von Aspirin gehören Kopfschmerzen.",
       "Man kann vor Lachen sterben.",
-      "Die Kettens&auml;ge wurde erfunden f&uuml;r Geburten. Aua.",
-      "K&uuml;he haben beste Freunde und sie werden gestresst, wenn man sie trennt.",
-      "Oktopusse haben drei Herzen und wenn sie schwimmen, h&ouml;rt eins auf zu schlagen.",
+      "Die Kettensäge wurde erfunden für Geburten. Aua.",
+      "Kühe haben beste Freunde und sie werden gestresst, wenn man sie trennt.",
+      "Oktopusse haben drei Herzen und wenn sie schwimmen, hört eins auf zu schlagen.",
       `<img src="all or nothing/2021-12-29 (4).png" alt="Letzter Fact Bild" style="max-width: 100%; height: auto;">`
     ];
 
@@ -77,16 +86,15 @@
     const factBox = document.getElementById("factBox");
     const nextFactBtn = document.getElementById("nextFactBtn");
 
-  nextFactBtn.addEventListener("click", () => {
-  if (currentIndex < facts.length) {
-    factBox.innerHTML = facts[currentIndex];
-    currentIndex++;
-  } else {
-    // Nach dem letzten Fakt � Weiterleitung zu Entscheidung.html
-    window.location.href = "Entscheidung.html";
-  }
-});
-
+    nextFactBtn.addEventListener("click", () => {
+      if (currentIndex < facts.length) {
+        factBox.innerHTML = facts[currentIndex];
+        currentIndex++;
+      } else {
+        // Weiterleitung nach dem letzten Fakt
+        window.location.href = "entscheidung.html";
+      }
+    });
   </script>
 
 
@@ -176,7 +184,7 @@
 <div class="static-star" style="top: 8vh; left: 40vw; width: 5px; height: 5px; animation-delay: 1.2s;"></div>
 <div class="static-star" style="top: 15vh; left: 25vw; width: 2px; height: 2px; animation-delay: 0.3s;"></div>
 <div class="static-star" style="top: 20vh; left: 30vw; width: 5px; height: 5px; animation-delay: 1.2s;"></div>
-<!-- 40 statische Sterne, Bereich: top 0�40vh, left 0�50vw -->
+<!-- 40 statische Sterne, Bereich: top 0–40vh, left 0–50vw -->
 <div class="static-star" style="top: 3vh; left: 4vw; width: 3px; height: 3px;"></div>
 <div class="static-star" style="top: 7vh; left: 12vw; width: 2px; height: 2px;"></div>
 <div class="static-star" style="top: 11vh; left: 25vw; width: 4px; height: 4px;"></div>
