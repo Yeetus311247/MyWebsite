@@ -123,8 +123,8 @@
   position: fixed;
   left: -500px;
   top: 0px;
-
-}button {
+} 
+button {
   background-color: #4CAF50; /* Grüner Hintergrund */
   border: none;
   color: white;
