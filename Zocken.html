@@ -34,40 +34,41 @@
 
 
 <script>
-  
-      const date = document.getElementById("Zock").value;
-      if (!date) {
-        alert("Bitte eingeben wann du Zeit/Lust hast (:");
-        return;
-      }
+  document.getElementById("Zock").addEventListener("click", function () {
+    const dateInput = document.getElementById("datetime").value;
 
-      const webhookUrl = "https://discordapp.com/api/webhooks/1361791610806997194/UVB-3HxQBRTL4CTo3H3a-IxVl1d7kZVjpK87UMTIAW3r9aexiy5sH6f8Mc1nFXyOo1q5";
-
-      const payload = {
-        username: "ZockBot 🎮",
-        content: `Jacky hat zeit am **${date}** 😎`
-      };
-
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      })
-      .then(response => {
-        if (response.ok) {
-          document.getElementById("confirmation").innerText = "✅ Termin wurde gesendet!";
-        } else {
-          document.getElementById("confirmation").innerText = "❌ Fehler beim Senden.";
-        }
-      })
-      .catch(error => {
-        console.error("Error sending webhook:", error);
-        document.getElementById("confirmation").innerText = "⚠️ Es gab ein Problem.";
-      });
+    if (!dateInput) {
+      alert("Bitte eingeben, wann du Zeit/Lust hast (:");
+      return;
     }
-  </script>
+
+    const webhookUrl = "https://discordapp.com/api/webhooks/1361791610806997194/UVB-3HxQBRTL4CTo3H3a-IxVl1d7kZVjpK87UMTIAW3r9aexiy5sH6f8Mc1nFXyOo1q5";
+
+    const payload = {
+      username: "ZockBot 🎮",
+      content: `Jacky hat Zeit am **${dateInput}** 😎`
+    };
+
+    fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Termin wurde gesendet!");
+      } else {
+        alert("❌ Fehler beim Senden.");
+      }
+    })
+    .catch(error => {
+      console.error("Error sending webhook:", error);
+      alert("⚠️ Es gab ein Problem beim Senden.");
+    });
+  });
+</script>
 
 <div class="stars">
   <div class="star"></div>
