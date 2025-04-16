@@ -109,14 +109,14 @@
 }
 .sonic {
   position: fixed;
-  left: 150px;
-  top: 400px;
+  left: 50px;
+  top: 450px;
   z-index: 1;
 }
 .patrick {
   position: fixed;
-  left: 250px;
-  top: 400px;
+  left: 350px;
+  top: 450px;
   z-index: 1;
 }
 .Pika {
