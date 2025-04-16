@@ -6,6 +6,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
 .stars {
@@ -107,24 +108,24 @@
         }
 }
 .sonic {
-  position: relative;
+  position: fixed;
   left: 200px;
   top: 500px;
   z-index: 1;
 }
 .patrick {
-  position: relative;
+  position: fixed;
   left: 300px;
   top: 700px;
   z-index: 1;
 }
 .Pika {
-  position: relative;
+  position: fixed;
   left: -200px;
   top: 0px;
 
 }button {
-  background-color: #4CAF50; /* Grüner Hintergrund */
+  background-color: #4CAF50; /* GrÃ¼ner Hintergrund */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -138,7 +139,7 @@
 }
 
 button:hover {
-  background-color: #45a049; /* Etwas dunklerer Grünton beim Hover */
+  background-color: #45a049; /* Etwas dunklerer GrÃ¼nton beim Hover */
 }
 h1{color: white;
   font-size: 75px; 
