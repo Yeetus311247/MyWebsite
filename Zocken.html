@@ -32,6 +32,39 @@
 
 <div align="center">  <button onclick="history.back()">Zur&uuml;ck</button> </div>
 
+<script>
+document.querySelector('input[type="submit"]').addEventListener('click', function () {
+  const date = document.getElementById('datetime').value;
+  if (!date) {
+    alert("Bitte Mal ein Datum Wählen");
+    return;
+  }
+
+  const webhookUrl = "https://discord.com/api/webhooks/DEIN-WEBHOOK-HIER"; // Webhook hier einfügen
+  const payload = {
+    content: `Time für games: **${date}**`
+  };
+
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Danke! ");
+    } else {
+      alert("Fehler beim Senden an Discord ");
+    }
+  })
+  .catch(error => {
+    console.error("Fehler:", error);
+    alert("Technischer Fehler beim Senden.");
+  });
+});
+</script>
 
 <div class="stars">
   <div class="star"></div>
