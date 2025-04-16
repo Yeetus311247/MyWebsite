@@ -6,6 +6,11 @@ body {
   text-align: center;
   background: radial-gradient(circle, #ffccff 0%, #cc99ff 100%);
   overflow: hidden;
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 }
 
 .container {
@@ -57,7 +62,7 @@ h1 {
   color: #000000;
 }
 button {
-  background-color: #4CAF50; /* Grüner Hintergrund */
+  background-color: #4CAF50; /* GrÃ¼ner Hintergrund */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -71,7 +76,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Etwas dunklerer Grünton beim Hover */
+  background-color: #45a049; /* Etwas dunklerer GrÃ¼nton beim Hover */
 }
 
 
