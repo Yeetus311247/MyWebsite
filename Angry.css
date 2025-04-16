@@ -110,18 +110,18 @@
 .sonic {
   position: fixed;
   left: 50px;
-  top: 450px;
+  top: 150px;
   z-index: 1;
 }
 .patrick {
   position: fixed;
   left: 350px;
-  top: 450px;
+  top: 650px;
   z-index: 1;
 }
 .Pika {
   position: fixed;
-  left: -500px;
+  left: -400px;
   top: 0px;
   z-index: 1;
 } 
