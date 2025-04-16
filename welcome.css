@@ -1,0 +1,78 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: radial-gradient(circle, #ffccff 0%, #cc99ff 100%);
+  overflow: hidden;
+}
+
+.container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000000;
+  text-shadow: 0 0 10px white;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.option:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.option img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.option p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #000000;
+}
+button {
+  background-color: #4CAF50; /* Grüner Hintergrund */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #45a049; /* Etwas dunklerer Grünton beim Hover */
+}
+
+
+

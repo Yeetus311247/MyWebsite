@@ -1,0 +1,145 @@
+/* Hintergrund */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.twinkling {
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds{
+        width:10000px;
+        height: 100%;
+        background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+        background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+
+.moon {
+  height: 70vh;
+  width: 70vh;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* Spotify Wrapper */
+.spotify-wrapper {
+  width: 300px;
+  height: 380px;
+  margin: 20px;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  z-index: 10;
+}
+
+@keyframes move-background {
+  from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+}
+@-webkit-keyframes move-background {
+  from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+}
+
+@-moz-keyframes move-background {
+        from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+}
+
+    @-webkit-keyframes move-background {
+        from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+}
+.sonic {
+  position: relative;
+  left: 200px;
+  top: 500px;
+  z-index: 1;
+}
+.patrick {
+  position: relative;
+  left: 300px;
+  top: 700px;
+  z-index: 1;
+}
+.Pika {
+  position: relative;
+  left: -200px;
+  top: 0px;
+
+}button {
+  background-color: #4CAF50; /* Grüner Hintergrund */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #45a049; /* Etwas dunklerer Grünton beim Hover */
+}
+h1{color: white;
+  font-size: 75px; 
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>? Date Anfrage ?</title>
+  <style>
+   html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle, #ffccff 0%, #cc99ff 100%);
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+}
+
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+    .corner-image {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 400px;
+  height: auto;
+  z-index: 1000;
+}
+
+    #question {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    label {
+      color: white;
+      font-size: 18px;
+    }
+
+    input[type="date"] {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      margin: 10px 0;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 25px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #happyScreen {
+      display: none;
+      color: pink;
+      font-size: 30px;
+      margin-top: 40px;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130%;
+      height: 20%;
+      transform: rotate(-45deg);
+      z-index: 0;
+      pointer-events: none;
+      color: white;
+    }
+
+    .star {
+      position: absolute;
+      top: var(--top-offset);
+      left: 0;
+      width: var(--star-tail-length);
+      height: 2px;
+      background: linear-gradient(45deg, white, transparent);
+      border-radius: 50%;
+      filter: drop-shadow(0 0 6px white);
+      transform: translate3d(104em, 0, 0);
+      animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--fall-duration) var(--fall-delay) ease-out infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translate3d(-30em, 0, 0);
+      }
+    }
+
+    @keyframes tail-fade {
+      0%, 50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+      }
+      70%, 80% {
+        width: 0;
+        opacity: 0.4;
+      }
+      100% {
+        width: 0;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div id="question">Wann hast du Zeit fürs Date?</div>
+    <label for="datetime">Hope ur doing fine ??</label>
+    <input type="date" id="datetime" name="Date">
+    <input type="submit" value="Submit">
+    <div id="happyScreen">
+      <p>Yaaaay ??</p>
+      <img src="yay-x08yql.jpg" width="600" height="401" alt="yay">
+    </div>
+  </div>
+
+  <div class="stars">
+
+  </div>
