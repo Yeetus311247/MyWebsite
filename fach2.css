@@ -13,6 +13,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden; 
 }
 
 .stars {
@@ -57,6 +58,7 @@
   position: absolute;
   z-index: 3;
   right: 20px;
+  top: 20px; 
 }
 
 #question {
@@ -64,7 +66,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 150px;
+  margin-top: 200px; 
   color: white;
   font-size: 36px;
   font-weight: bold;
@@ -72,10 +74,11 @@
   text-shadow: 0 0 10px black;
   text-align: center;
   width: 100%;
-  padding: 0 20px; 
-  box-sizing: border-box; 
-  overflow-wrap: break-word; 
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
+
 .content {
   position: relative;
   z-index: 10;
@@ -108,20 +111,19 @@ input[type="submit"] {
 
 @media screen and (max-width: 600px) {
   #question {
-    position: relative; 
-    margin-top: 200px; 
+    position: relative;
+    margin-top: 200px;
     font-size: 28px;
-    width: 100%; 
-    text-align: center; 
-    padding: 0 20px; 
-    box-sizing: border-box; 
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .angry {
-    width: 35px; 
+    width: 35px;
     height: 35px;
   }
-}
 
   .content {
     margin-top: 30px;
@@ -156,7 +158,7 @@ input[type="submit"] {
   }
 
   .moon {
-    width: 40vw;
+    width: 40vw; 
     height: 40vw;
     right: 10px;
     top: 10px;
