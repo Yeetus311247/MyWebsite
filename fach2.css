@@ -60,18 +60,20 @@
 }
 
 #question {
-  margin-top: 120px; /* Du kannst mit dem Wert spielen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  margin-top: 200px; 
   margin-bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
   z-index: 10;
   text-shadow: 0 0 10px black;
   text-align: center;
-  width: 90%;
-  word-wrap: break-word;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .content {
   position: relative;
