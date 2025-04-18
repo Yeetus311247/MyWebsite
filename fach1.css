@@ -1,4 +1,4 @@
-
+/* Basis-Stile für mobile Geräte und PC */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,32 +6,40 @@ html, body {
   font-family: sans-serif;
   background: radial-gradient(circle, #ffccff 0%, #cc99ff 100%);
   overflow: hidden;
+  position: relative;
 }
 
+/* Container für alles */
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  z-index: 1; /* Damit der Text über den Sternen ist */
 }
 
-
+/* Text-Stile für das Frage-Label */
 #question {
   font-size: 2rem;
   text-align: center;
   margin-top: 1rem;
+  position: relative;
+  z-index: 2; /* Text bleibt oben */
 }
 
-
+/* Eingabefelder und Buttons */
 input[type="date"], input[type="submit"] {
   padding: 0.8rem;
   margin: 0.5rem 0;
   font-size: 1.2rem;
   border-radius: 5px;
   border: none;
-  width: 60%; 
+  width: 60%; /* Breite bleibt fix für PC und mobile Geräte */
   max-width: 400px;
+  position: relative;
+  z-index: 2; /* Eingaben und Buttons bleiben oben */
 }
 
 button {
@@ -42,17 +50,46 @@ button {
   border: none;
   background-color: #ff99ff;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
+/* Sterne-Animationen */
 .star {
   position: absolute;
   background-color: white;
   border-radius: 50%;
   opacity: 0.5;
   animation: starfall 10s infinite linear;
+  z-index: 0; /* Sterne sollen hinter allem anderen bleiben */
 }
 
+/* Planet-Animation */
+.planet {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 15vw;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  z-index: 0;
+  animation: movePlanet 20s infinite linear;
+}
 
+/* Sternschuppen */
+.shooting-star {
+  position: absolute;
+  background-color: #fff;
+  height: 2px;
+  width: 50px;
+  opacity: 0.8;
+  animation: shoot 1s infinite;
+  z-index: 0;
+}
+
+/* Animation für die Sterne */
 @keyframes starfall {
   from {
     top: -5vh;
@@ -64,7 +101,35 @@ button {
   }
 }
 
+/* Animation für den Planeten */
+@keyframes movePlanet {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
 
+/* Animation für die Sternschuppen */
+@keyframes shoot {
+  0% {
+    top: -5%;
+    left: 50%;
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Media Query für größere Bildschirme (PC) */
 @media (min-width: 768px) {
   #question {
     font-size: 2.5rem;
@@ -79,19 +144,25 @@ button {
   }
 }
 
-
+/* Media Query für mobile Geräte (weniger als 768px) */
 @media (max-width: 767px) {
   #question {
     font-size: 1.8rem;
   }
 
   input[type="date"], input[type="submit"] {
-    font-size: 1rem; 
-    width: 80%; 
+    font-size: 1rem;
+    width: 80%;
   }
 
   button {
     font-size: 1rem;
     width: 80%;
+  }
+
+  /* Planeten-Größe für mobile Geräte */
+  .planet {
+    width: 30vw;
+    height: 30vw;
   }
 }
