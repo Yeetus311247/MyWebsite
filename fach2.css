@@ -104,15 +104,15 @@ input[type="submit"] {
 
 @media screen and (max-width: 600px) {
   #question {
-    position: static; /* aus dem absoluten Layout raus */
-    margin-top: 150px; /* weiter runter */
+    position: static; 
+    margin-top: 150px;
     margin-bottom: 40px;
     font-size: 28px;
     text-align: center;
   }
 
   .content {
-    margin-top: 100px; /* immer noch weiter runter */
+    margin-top: 100px; 
     padding: 0 20px;
   }
 
