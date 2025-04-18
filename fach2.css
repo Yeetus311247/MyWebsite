@@ -63,17 +63,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; 
-  margin-top: 200px; 
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-top: 150px;
   color: white;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
   z-index: 10;
   text-shadow: 0 0 10px black;
   text-align: center;
   width: 100%;
-  flex-wrap: wrap;
+  padding: 0 20px; 
+  box-sizing: border-box; 
 }
 .content {
   position: relative;
@@ -105,10 +105,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@@media screen and (max-width: 600px) {
+  #question {
+    margin-top: 220px; 
+    font-size: 28px;
+    width: 100%;
+    text-align: center; 
+    padding: 0 15px; 
+  }
+
   .angry {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Kleinere Größe für Emoji auf Handys */
+    height: 35px;
   }
 }
 
