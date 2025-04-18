@@ -74,6 +74,7 @@
   width: 100%;
   padding: 0 20px; 
   box-sizing: border-box; 
+  overflow-wrap: break-word; 
 }
 .content {
   position: relative;
@@ -105,17 +106,19 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-@@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #question {
-    margin-top: 220px; 
+    position: relative; 
+    margin-top: 200px; 
     font-size: 28px;
-    width: 100%;
+    width: 100%; 
     text-align: center; 
-    padding: 0 15px; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
   }
 
   .angry {
-    width: 35px; /* Kleinere Größe für Emoji auf Handys */
+    width: 35px; 
     height: 35px;
   }
 }
