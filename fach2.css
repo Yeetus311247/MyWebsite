@@ -105,13 +105,13 @@ input[type="submit"] {
 @media screen and (max-width: 600px) {
   #question {
     position: relative;
-    top: 0;
-    margin-bottom: 30px;
+    top: 50px; /* weiter runter */
+    margin-bottom: 40px;
     font-size: 28px;
   }
 
   .content {
-    margin-top: 50px;
+    margin-top: 150px; /* Inhalt nach unten schieben */
     padding: 0 20px;
   }
 
