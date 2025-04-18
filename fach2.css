@@ -1,109 +1,64 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="mystyle.css">
-</head>
-<body>
-   <style>
-
-
 @keyframes move-background {
   from {
-                -webkit-transform: translate3d(0px, 0px, 0px);
-        }
-        to {
-                -webkit-transform: translate3d(1000px, 0px, 0px);
-        }
-}
-@-webkit-keyframes move-background {
-  from {
-                -webkit-transform: translate3d(0px, 0px, 0px);
-        }
-        to {
-                -webkit-transform: translate3d(1000px, 0px, 0px);
-        }
+    transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(1000px, 0px, 0px);
+  }
 }
 
-@-moz-keyframes move-background {
-        from {
-                -webkit-transform: translate3d(0px, 0px, 0px);
-        }
-        to {
-                -webkit-transform: translate3d(1000px, 0px, 0px);
-        }
-}
-
-    @-webkit-keyframes move-background {
-        from {
-                -webkit-transform: translate3d(0px, 0px, 0px);
-        }
-        to {
-                -webkit-transform: translate3d(1000px, 0px, 0px);
-        }
-}
-
-.background-container{
-        position: fixed;
-        top: 0;
-        left:0;
-        bottom: 0;
-        right: 0;
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .stars {
- background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
- position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: block;
-          z-index: 0;
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
 
-.twinkling{
-        width:10000px;
-        height: 100%;
-        background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-        background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-
-    -moz-animation:move-background 70s linear infinite;
-  -ms-animation:move-background 70s linear infinite;
-  -o-animation:move-background 70s linear infinite;
-  -webkit-animation:move-background 70s linear infinite;
-  animation:move-background 70s linear infinite;
-
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  animation: move-background 70s linear infinite;
 }
 
-.clouds{
-        width:10000px;
-        height: 100%;
-        background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-        background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-
-   -moz-animation:move-background 150s linear infinite;
-  -ms-animation:move-background 150s linear infinite;
-  -o-animation:move-background 150s linear infinite;
-  -webkit-animation:move-background 150s linear infinite;
-  animation:move-background 150s linear infinite;
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  animation: move-background 150s linear infinite;
 }
-.moon{
+
+.moon {
   height: 70vh;
-  width:70vh;
+  width: 70vh;
   position: absolute;
   z-index: 3;
   right: 20px;
 }
+
 #question {
   position: absolute;
   top: 10px;
@@ -114,7 +69,9 @@
   font-weight: bold;
   z-index: 10;
   text-shadow: 0 0 10px black;
+  text-align: center;
 }
+
 .content {
   position: relative;
   z-index: 10;
@@ -122,6 +79,7 @@
   text-align: center;
   margin-top: 100px;
   font-size: 18px;
+  padding: 0 20px;
 }
 
 input[type="text"],
@@ -131,6 +89,8 @@ input[type="password"] {
   border: none;
   margin-top: 15px;
   margin-bottom: 15px;
+  width: 300px;
+  max-width: 90%;
 }
 
 input[type="submit"] {
@@ -142,10 +102,33 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* ===== MOBILE STYLES ===== */
+@media screen and (max-width: 600px) {
+  .moon {
+    width: 50vw;
+    height: 50vw;
+    right: 10px;
+    top: 10px;
+  }
 
+  #question {
+    font-size: 6vw;
+    top: 60px;
+  }
 
+  .content {
+    font-size: 16px;
+    margin-top: 150px;
+  }
 
-          </style>
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    font-size: 16px;
+  }
 
-</body>
-</html>
+  input[type="submit"] {
+    width: 80%;
+    font-size: 16px;
+  }
+}
